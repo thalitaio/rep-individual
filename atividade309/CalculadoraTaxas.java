@@ -8,41 +8,23 @@ _ Ao final da execução do método main, imprima todos os dados das taxas cobra
 
 */
 package atividade309;
-import java.util.Scanner;
-
 
 public class CalculadoraTaxas {
-    private double valorInicial;
+    private double taxaTransacao = 0.001;
+    private double taxaSaque = 1.30;
+    private int numSaques;
 
-    Scanner sc = new Scanner(System.in);
+    public double taxaTransacao(double valor){
+        double resultTaxaTransf = valor * (taxaTransacao / 100);
+        return resultTaxaTransf;
+    }
 
-    public void mensagem(){
-        System.out.println("Digite a transação desejada");
-        System.out.println("D1 -- Transferência  ||  2 -- Saque");
-        int opcaoMenu = sc.nextInt();
-
-        switch (opcaoMenu) {
-            case 1:
-            System.out.println("Digite o valor:");
-            double valor = sc.nextInt();
-            System.out.println(taxaTransacao(valorInicial, valor)); 
-        
-            default:
-                break;
+    public double taxaSaque(double valor){
+        numSaques ++;
+        if (numSaques % 5 == 0) {
+            return taxaSaque;
         }
+        return 0;
     }
 
-    public double taxaTransacao(double valorInicial, double valor){
-        double resultTaxaTransf = valor - (valor * 0.001 / 100);
-        double novoSaldo = resultTaxaTransf;
-        return valorInicial + resultTaxaTransf;
-    }
-
-    public double tacaSaque(){
-        int numSaques = 5;
-        if (numSaques > 4) {
-            valorInicial =  valorInicial - 1.30;
-        }
-        return valorInicial;
-    }
-}
+}  
