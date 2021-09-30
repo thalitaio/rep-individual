@@ -21,7 +21,9 @@ public class CalculadoraTaxas {
 
     public double taxaSaque(double valor){
         numSaques ++;
+        System.out.println("============= Número de saques: " + numSaques + " =============");
         if (numSaques % 5 == 0) {
+            System.out.println("---------- Valor da taxa de saque atual: ");
             return taxaSaque;
         }
         return 0;

@@ -47,7 +47,7 @@ public class PrincipalCalTaxas {
     }
 
     static boolean retorna(){
-        System.out.print("\nDeseja voltar ao menu inicial?\n Digite 1 para SIM ou 2 para NÃO: ");
+        System.out.print("\n Deseja voltar ao menu inicial?\n Digite 1 para SIM ou 2 para NÃO: ");
             int opcContinua = sc.next().charAt(0);
             boolean continua;
 
