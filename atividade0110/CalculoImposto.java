@@ -18,17 +18,17 @@ public class CalculoImposto {
     private double iof = 0.0638;
     private double ir = 0.09;
 
-    double metodoIss(){
+    double metodoIss(double valor){
         double resultado = valor * iss;
         return resultado;
     }
 
-    double metodoIof(){
+    double metodoIof(double valor){
         double resultado = valor * iof;
         return resultado;
     }
 
-    double metodoIr(){
+    double metodoIr(double valor){
         double resultado = valor * ir;
         return resultado;
     }
