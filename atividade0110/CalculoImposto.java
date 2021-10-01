@@ -14,12 +14,24 @@ package atividade0110;
 public class CalculoImposto {
 
     private double valor = 0.0;
-    private double iss = valor * (4/100);
-    private double iof = valor * (6.38 / 100);
-    private double ir = valor * (9 / 100);
+    private double iss = 0.04;
+    private double iof = 0.0638;
+    private double ir = 0.09;
 
-    
+    double metodoIss(double valor, double iss){
+        double resultado = valor * iss;
+        return resultado;
+    }
 
+    double metodoIof(double valor, double iof){
+        double resultado = valor * iof;
+        return resultado;
+    }
+
+    double metodoIr(double valor, double ir){
+        double resultado = valor * ir;
+        return resultado;
+    }
 
     
 }
