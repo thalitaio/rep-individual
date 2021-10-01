@@ -12,5 +12,9 @@ _ Nesta segunda classe, crie um objeto da classe calculadora, realize a chamada 
 package atividade0110;
 
 public class CalculoImposto {
+
+    double valor = 0.0;
+
+    
     
 }
