@@ -35,6 +35,15 @@ public class Numeros {
         numeros_inteiros[7] = 7;
         numeros_inteiros[8] = 8;
         numeros_inteiros[9] = 9;
+
+        //Imprimindo os arrays
+       // for (int i = 0; i < numeros_inteiros.length; i++) {
+        //    System.out.println(numeros_inteiros[1]);
+        //}
+
+        for (int i : numeros_inteiros) {
+            System.out.println(i);
+        }
     }
 
 }
