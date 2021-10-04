@@ -8,9 +8,9 @@ _ Adicione um valor para cada posição do array. OK
 _ Imprima ao final da execução do main, todas as posições do array utilizando o laço de repetição for. OK
 _ Crie uma classe Pessoa Física com os atributos código, nome, sobrenome, idade, rg e cpf. OK
 _ Todos os atributos da classe Pessoa Física devem ser privados.OK
-_ Construa os métodos get e set para cada um dos atributos da classe.
-_ Crie uma classe Cadastro de Pessoas que contenha um método main.
-_ Nesta classe, crie um array de Pessoa com 5 posições.
+_ Construa os métodos get e set para cada um dos atributos da classe.OK
+_ Crie uma classe Cadastro de Pessoas que contenha um método main.OK
+_ Nesta classe, crie um array de Pessoa com 5 posições.OK
 _ Crie 5 objetos da classe pessoa, chame os método set para atribuir valores diferente para cada pessoa e salve cada objeto em uma posição do array.
 _ Imprima todos os dados das 5 pessoas utilizando o laço de repetição foreach.
 
