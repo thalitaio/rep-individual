@@ -10,7 +10,7 @@ public class TelaPrincipalLoja {
 
         estoque1.setNome("Regata Celebridade");
 
-        estoque1.setValor(69.00);
+        estoque1.setValor(69);
 
         //Impressão dos dados
         System.out.println("=== Produtos Cadastrados === \n");
@@ -21,7 +21,7 @@ public class TelaPrincipalLoja {
         System.out.print("Nome do Produto: ");
         System.out.println(estoque1.getNome());
         System.out.print("Valor: R$");
-        System.out.println(estoque1.getValor());
+        System.out.printf("%.2f", estoque1.getValor());
         System.out.println("\n=========================================");
 
     }

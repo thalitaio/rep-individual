@@ -7,7 +7,7 @@ public class TelaPrincipalBanco {
         novo_cliente.setAgencia(6782);
         novo_cliente.setCodigoCliente(23444);
         novo_cliente.setNumero(133);
-        novo_cliente.setSaldo(5.000);
+        novo_cliente.setSaldo(5000);
 
         //Impressão dos dados
         System.out.println("=== Conta Corrente ===\n");
@@ -18,7 +18,7 @@ public class TelaPrincipalBanco {
         System.out.print("Número: ");
         System.out.println(novo_cliente.getNumero());
         System.out.print("Saldo: R$ ");
-        System.out.println(novo_cliente.getSaldo());
+        System.out.printf("%.2f", novo_cliente.getSaldo());
         System.out.println("\n=========================================");
 
     }
