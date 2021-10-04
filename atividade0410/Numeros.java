@@ -5,7 +5,7 @@ _ Execute o commit e push a cada etapa finalizada. OK
 _ Crie uma classe Números com um método main. OK
 _ Crie nesta classe um array de números inteiros com 10 posições.OK
 _ Adicione um valor para cada posição do array. OK
-_ Imprima ao final da execução do main, todas as posições do array utilizando o laço de repetição for.
+_ Imprima ao final da execução do main, todas as posições do array utilizando o laço de repetição for. OK
 _ Crie uma classe Pessoa Física com os atributos código, nome, sobrenome, idade, rg e cpf.
 _ Todos os atributos da classe Pessoa Física devem ser privados.
 _ Construa os métodos get e set para cada um dos atributos da classe.
@@ -36,13 +36,9 @@ public class Numeros {
         numeros_inteiros[8] = 8;
         numeros_inteiros[9] = 9;
 
-        //Imprimindo os arrays
-       // for (int i = 0; i < numeros_inteiros.length; i++) {
-        //    System.out.println(numeros_inteiros[1]);
-        //}
-
-        for (int i : numeros_inteiros) {
-            System.out.println(i);
+        // Imprimindo os arrays
+        for (int i = 0; i < numeros_inteiros.length; i++) {
+           System.out.println(numeros_inteiros[i]);
         }
     }
 
