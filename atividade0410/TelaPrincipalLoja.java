@@ -20,8 +20,9 @@ public class TelaPrincipalLoja {
         System.out.println(estoque1.getDescricao());
         System.out.print("Nome do Produto: ");
         System.out.println(estoque1.getNome());
-        System.out.print("Valor: ");
+        System.out.print("Valor: R$");
         System.out.println(estoque1.getValor());
+        System.out.println("\n=========================================");
 
     }
 }

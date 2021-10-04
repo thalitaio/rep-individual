@@ -4,7 +4,7 @@ public class ContaCorrente {
     private int agencia;
     private int numero;
     private int codigo_cliente;
-    private boolean saldo;
+    private double saldo;
 
     public void setAgencia(int agencia){
         this.agencia = agencia;
@@ -27,10 +27,10 @@ public class ContaCorrente {
         return this.codigo_cliente;
     }
 
-    public void setSaldo(boolean saldo){
+    public void setSaldo(double saldo){
         this.saldo = saldo;
     }
-    public boolean getSaldo(){
+    public double getSaldo(){
         return this.saldo;
     }
 

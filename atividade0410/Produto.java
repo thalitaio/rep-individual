@@ -6,8 +6,8 @@ _ Crie uma classe Conta Corrente com os atributos Agência, Numero, Codigo do Cl
 _ Todos os atributos da classe Conta Corrente devem ser privados.OK
 _ Construa os métodos get e set para cada um dos atributos da classe.OK
 _ Crie uma classe Tela Principal Loja que contenha um método main. OK
-_ Nesta classe, crie um objeto da Produto, realize a chamada a todos os métodos set e get, ao final da execução, imprima o valor de todos os atributos da classe.
-_ Crie uma classe Tela Principal Banco que contenha um método main.
+_ Nesta classe, crie um objeto da Produto, realize a chamada a todos os métodos set e get, ao final da execução, imprima o valor de todos os atributos da classe. OK
+_ Crie uma classe Tela Principal Banco que contenha um método main. OK
 _ Nesta classe, crie um objeto da Conta Corrente, realize a chamada a todos os métodos set e get, ao final da execução, imprima o valor de todos os atributos da classe.
 
 
