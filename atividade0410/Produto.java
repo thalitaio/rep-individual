@@ -1,7 +1,7 @@
 /*
 _ Crie uma classe produto com os atributos Código, Nome, Descrição e Valor. OK
 _ Todos os atributos da classe produtos devem ser privados. OK
-_ Construa os métodos get e set para cada um dos atributos.
+_ Construa os métodos get e set para cada um dos atributos. OK
 _ Crie uma classe Conta Corrente com os atributos Agência, Numero, Codigo do Cliente e Saldo.
 _ Todos os atributos da classe Conta Corrente devem ser privados.
 _ Construa os métodos get e set para cada um dos atributos da classe.
