@@ -6,8 +6,8 @@ _ Crie uma classe Números com um método main. OK
 _ Crie nesta classe um array de números inteiros com 10 posições.OK
 _ Adicione um valor para cada posição do array. OK
 _ Imprima ao final da execução do main, todas as posições do array utilizando o laço de repetição for. OK
-_ Crie uma classe Pessoa Física com os atributos código, nome, sobrenome, idade, rg e cpf.
-_ Todos os atributos da classe Pessoa Física devem ser privados.
+_ Crie uma classe Pessoa Física com os atributos código, nome, sobrenome, idade, rg e cpf. OK
+_ Todos os atributos da classe Pessoa Física devem ser privados.OK
 _ Construa os métodos get e set para cada um dos atributos da classe.
 _ Crie uma classe Cadastro de Pessoas que contenha um método main.
 _ Nesta classe, crie um array de Pessoa com 5 posições.
