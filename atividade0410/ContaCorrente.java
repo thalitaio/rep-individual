@@ -6,7 +6,7 @@ public class ContaCorrente {
     private int codigo_cliente;
     private boolean saldo;
 
-    public void setAgencia(int Agencia){
+    public void setAgencia(int agencia){
         this.agencia = agencia;
     }
     public int getAgencia(){
