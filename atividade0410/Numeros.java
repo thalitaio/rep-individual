@@ -3,8 +3,8 @@
 _ Utilize o repositório criado durante a realização da sua última atividade individual. OK
 _ Execute o commit e push a cada etapa finalizada. OK
 _ Crie uma classe Números com um método main. OK
-_ Crie nesta classe um array de números inteiros com 10 posições. OK
-_ Adicione um valor para cada posição do array.
+_ Crie nesta classe um array de números inteiros com 10 posições.OK
+_ Adicione um valor para cada posição do array. OK
 _ Imprima ao final da execução do main, todas as posições do array utilizando o laço de repetição for.
 _ Crie uma classe Pessoa Física com os atributos código, nome, sobrenome, idade, rg e cpf.
 _ Todos os atributos da classe Pessoa Física devem ser privados.
@@ -21,5 +21,20 @@ _ Imprima todos os dados das 5 pessoas utilizando o laço de repetição foreach
 package atividade0410;
 
 public class Numeros {
-    int[] numeros_inteiros = new int[10];
+    public static void main(String[] args) {
+        
+        int[] numeros_inteiros = new int[10];
+
+        numeros_inteiros[0] = 0;
+        numeros_inteiros[1] = 1;
+        numeros_inteiros[2] = 2;
+        numeros_inteiros[3] = 3;
+        numeros_inteiros[4] = 4;
+        numeros_inteiros[5] = 5;
+        numeros_inteiros[6] = 6;
+        numeros_inteiros[7] = 7;
+        numeros_inteiros[8] = 8;
+        numeros_inteiros[9] = 9;
+    }
+
 }
