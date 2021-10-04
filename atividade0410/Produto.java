@@ -22,4 +22,33 @@ public class Produto {
     private String nome;
     private String descricao;
     private boolean valor;
+
+    public void setCodigo(int codigo){
+        this.codigo = codigo;
+    }
+    public int getCodigo(){
+        return this.codigo;
+    }
+
+    public void setNome(String nome){
+        this.nome = nome;
+    }
+    public String getNome(){
+        return this.nome;
+    }
+
+    public void setDescricao(String descricao){
+        this.descricao = descricao;
+    }
+    public String getDescricao(){
+        return this.descricao;
+    }
+
+    public void setValor(boolean valor){
+        this.valor = valor;
+    }
+    public boolean getValor(){
+        return this.valor;
+    }
+
 }
