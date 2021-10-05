@@ -1,5 +1,5 @@
 /*
-_ Crie uma classe Pessoa com as propriedades nome, sobrenome e matrícula.
+_ Crie uma classe Pessoa com as propriedades nome, sobrenome e matrícula. OK
 _ Crie uma classe Funcionário com as propriedades salário e departamento.
 _ Crie uma classe Coordenador com as propriedades Curso Coordenado e bônus.
 _ Crie uma classe Aluno com as propriedades curso e turma.
