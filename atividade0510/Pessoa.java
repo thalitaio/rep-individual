@@ -1,7 +1,7 @@
 /*
 _ Crie uma classe Pessoa com as propriedades nome, sobrenome e matrícula. OK
-_ Crie uma classe Funcionário com as propriedades salário e departamento.
-_ Crie uma classe Coordenador com as propriedades Curso Coordenado e bônus.
+_ Crie uma classe Funcionário com as propriedades salário e departamento. OK
+_ Crie uma classe Coordenador com as propriedades Curso Coordenado e bônus. OK
 _ Crie uma classe Aluno com as propriedades curso e turma.
 _ Altere a classe Funcionario para que ela herde da classe Pessoa.
 _ Altere a classe Coordenador para que ela herde da classe Funcionário.
