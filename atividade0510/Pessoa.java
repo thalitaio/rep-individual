@@ -7,7 +7,7 @@ _ Altere a classe Funcionario para que ela herde da classe Pessoa. OK
 _ Altere a classe Coordenador para que ela herde da classe Funcionário.OK
 _ Altere a classe Aluno para que ela herde da classe Pessoa.OK
 _ Os atributos de todas as classes devem ser privados. OK
-_ Construa os métodos get e set para cada um dos atributos das classes.
+_ Construa os métodos get e set para cada um dos atributos das classes.OK
 
 _ Crie uma classe Universidade, adicione um método main, crie um objeto de Funcionario, um objeto de Coordenador e um objeto de Aluno.
 _ Utilize os métodos set dos objetos de Funcionario, Coordenador e Aluno para inserir valores.

@@ -2,7 +2,7 @@ package atividade0510;
 
 public class Coordenador extends Funcionarios{
     private String curso_coordenado;
-    private int bonus;
+    private double bonus;
 
     public void setCurso_coordenado(String curso_coordenado) {
         this.curso_coordenado = curso_coordenado;
@@ -11,10 +11,10 @@ public class Coordenador extends Funcionarios{
         return curso_coordenado;
     }
 
-    public void setBonus(int bonus) {
+    public void setBonus(double bonus) {
         this.bonus = bonus;
     }
-    public int getBonus() {
+    public double getBonus() {
         return bonus;
     }
 }
