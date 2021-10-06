@@ -5,12 +5,12 @@ _ Crie uma classe Conta que deve possuir os atributos privados: saldo e código 
 _ Crie os métodos set e get para os atributos privados da classe Conta. OK
 _ Crie uma classe Conta Corrente com os atributos privados: taxa transferência, taxa manutenção e número de transferências. OK
 _ Defina um valor padrão para taxa de transferência de R$10.50, um valor de R$2.50 para taxa de manutenção e 0 para o número de transferências OK
-_ A classe Conta Corrente deve herdar da classe Conta.OK 
-_ Crie um método transferência na classe Conta. O método deve receber um valor double e debitar do saldo da conta.
-_ Crie uma classe Teste, adicione um método main, crie um objeto de Conta e um objeto de Conta Corrente.
-_ Utilize os métodos set para inserir os valores de saldo e de código de cliente para os dois objetos.
-_ Realize uma transferência em cada uma das contas.
-_ Imprima os dados de código de cliente, saldo e de saldo após a transferência, para cada objeto
+_ A classe Conta Corrente deve herdar da classe Conta.OK  -- commitado -- 
+_ Crie um método transferência na classe Conta. O método deve receber um valor double e debitar do saldo da conta.OK
+_ Crie uma classe Teste, adicione um método main, crie um objeto de Conta e um objeto de Conta Corrente. OK
+_ Utilize os métodos set para inserir os valores de saldo e de código de cliente para os dois objetos.OK
+_ Realize uma transferência em cada uma das contas.OK
+_ Imprima os dados de código de cliente, saldo e de saldo após a transferência, para cada objeto OK
 _ Altere a classe Conta Corrente construindo um método para sobrescrever o método de transfêrencia, da classe Conta.
 _ O novo método deve utilizar as funções do método principal, além de debitar a taxa de transferência do saldo da conta.
 _ O método de transferência da Conta Corrente também deve armazenar, no atributo número de transferencias, a quantidade de transferências realizadas e a cada 5 transferências deve debitar do saldo, o valor da taxa de manutenção de conta.
@@ -34,5 +34,11 @@ public class Conta {
     }
     public String getCodigo_cliente() {
         return codigo_cliente;
+    }
+
+    public double transferencia(double valor) {
+        double novo_saldo = saldo;
+        novo_saldo -= valor;
+        return novo_saldo;
     }
 }
