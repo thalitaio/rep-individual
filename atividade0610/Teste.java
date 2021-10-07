@@ -14,7 +14,7 @@ public class Teste {
 
     //conta corrente
     cc.setSaldo(2000);
-    cc.setCodigo_cliente("002");
+    cc.setCodigo_cliente("001");
     double saldo_inicial_cc = cc.getSaldo();
     cc.transferencia(50);
     cc.transferencia(50);
@@ -24,8 +24,10 @@ public class Teste {
     cc.transferencia(50);
 
     //Imprima os dados de código de cliente, saldo e de saldo após a transferência,
-    System.out.printf("Código cliente: %s -- Saldo: %.2f -- Saldo após transferência: %.2f \n", c.getCodigo_cliente(), saldo_inicial_c, c.getSaldo());
-    System.out.printf("Código cliente: %s -- Saldo: %.2f -- Saldo após transferência: %.2f \n", cc.getCodigo_cliente(), saldo_inicial_cc ,cc.getSaldo());
+    System.out.println("------------ Conta ----------- \n\n");
+    System.out.printf("Código cliente: %s -- Saldo: %.2f -- Saldo após transferência: %.2f \n\n", c.getCodigo_cliente(), saldo_inicial_c, c.getSaldo());
+    System.out.println("------------ Conta Corrente ----------- \n\n");
+    System.out.printf("Código cliente: %s -- Saldo: %.2f -- Saldo após transferência: %.2f \n\n", cc.getCodigo_cliente(), saldo_inicial_cc ,cc.getSaldo());
 
   }
 }
