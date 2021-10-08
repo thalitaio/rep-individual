@@ -16,8 +16,8 @@ public class TelaBanco {
     public static void main(String[] args) {
         ContaCorrente cc = new ContaCorrente(1000, "055");
 
-        double saque = cc.saque(200);
-        double deposito = cc.deposito(100);
+        cc.saque(200);
+        cc.deposito(100);
 
         System.out.println("-------- Extrato ----------");
         System.out.println(cc);

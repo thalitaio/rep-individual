@@ -9,7 +9,7 @@ public class TelaCalc {
         Calculadora calc = new Calculadora();
 
         double c1 = calc.soma(6.5, 6);
-        double c2 = calc.soma(10, 11);
+        int c2 = calc.soma(10, 11);
         float c3 = calc.soma(10.3f, 4.3f, 8.5f);
         long c4 = calc.soma(105, 45, 33);
 

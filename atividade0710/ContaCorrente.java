@@ -33,8 +33,7 @@ public class ContaCorrente {
     }
 
     //Crie um método depósito que recebe um valor double e soma ao valor do saldo.
-    public double
-    deposito(double valor) {
+    public double deposito(double valor) {
         saldo += valor;
         return saldo;
     }
