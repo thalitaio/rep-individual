@@ -16,15 +16,15 @@ public class LivrosController {
         return books;
     }
 
-    public void delete(Livros l){
-        books.remove(l);
-    }
-
     public void update(Livros l){
         if(books.contains(l)){
             this.delete(l);
             this.create(l);
         }
+    }
+
+    public void delete(Livros l){
+        books.remove(l);
     }
     
 }
