@@ -26,5 +26,8 @@ public class Main {
 
         //Imprima todos dos dados do objeto de Veículo convertido.
         System.out.println(veiculo_obj);
+
+        //Imprima todos dos dados do objeto de Carro convertido.
+        System.out.println(carro_obj);
     }
 }
