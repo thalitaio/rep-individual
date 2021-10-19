@@ -29,8 +29,11 @@ public class Main {
     dados.verificar(p2);
     dados.remove(p2);
     System.out.println(dados.add(p));
-    System.out.println(dados.verificar(p));
-    System.out.println(dados.remove(p));
+    System.out.println(dados.verificar(p2));
+    System.out.println(dados.remove(p2));
+
+    dados.add(a);
+    dados.imprime();
  }
     
 }

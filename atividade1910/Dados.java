@@ -41,4 +41,10 @@ public class Dados {
         }
         return "O item não esta cadastrado.\n";
     }
+
+    public void imprime(){
+        for (int i = 0; i < posicao; i++) {
+            System.out.println(dados[i]);
+        }
+    }
 }

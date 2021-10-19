@@ -17,7 +17,7 @@ public class Aluno extends Pessoa{
 
     @Override
     public String toString() {
-        String mensagem = "\nMatrícula: " + this.matricula + "\nTurma: " + this.turma + "\nCurso: " + this.curso;
+        String mensagem = super.toString() + "\nMatrícula: " + this.matricula + "\nTurma: " + this.turma + "\nCurso: " + this.curso;
         return mensagem;
     }
 }
