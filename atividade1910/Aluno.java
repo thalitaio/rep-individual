@@ -8,10 +8,12 @@ public class Aluno extends Pessoa{
 
     @Override
     public boolean equals(Object obj) {
-        Aluno a1 = (Aluno)obj;
-        if (this.matricula.equals(a1.matricula) && this.turma.equals(a1.turma) && this.curso.equals(a1.curso)) {
-            return true;
-        }
+        if (obj instanceof Aluno) {
+            Aluno a1 = (Aluno)obj;
+            if (this.matricula.equals(a1.matricula) && this.turma.equals(a1.turma) && this.curso.equals(a1.curso) && super.equals(a1)) {
+                return true;
+            }
+        }   
         return false;
     } 
 

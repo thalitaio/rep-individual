@@ -24,11 +24,9 @@ public class Main {
 
     Dados dados = new Dados();
 
-    dados.add(p);
-    Pessoa p2 = p;
-    dados.verificar(p2);
-    dados.remove(p2);
+   
     System.out.println(dados.add(p));
+    Pessoa p2 = p;
     System.out.println(dados.verificar(p2));
     System.out.println(dados.remove(p2));
 

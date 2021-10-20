@@ -24,9 +24,11 @@ public class Pessoa {
 
     @Override
     public boolean equals(Object obj) {
-        Pessoa p1 = (Pessoa)obj;
-        if(this.nome.equals(p1.nome) && this.sobrenome.equals(p1.sobrenome) && this.idade == p1.idade){
-            return true;
+        if (obj instanceof Pessoa) {
+            Pessoa p1 = (Pessoa)obj;
+            if(this.nome.equals(p1.nome) && this.sobrenome.equals(p1.sobrenome) && this.idade == p1.idade){
+                return true;
+            }
         }
         return false;
     }
