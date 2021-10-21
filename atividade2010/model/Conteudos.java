@@ -6,16 +6,6 @@ public class Conteudos {
     public String genero;
     public int id;
 
-   /* @Override
-    public boolean equals(Object obj) {
-        Conteudos cId = (Conteudos)obj;
-        if (this.id.equals(cId)) {
-            System.out.println("uhul");
-            return true;
-        }
-        return false;
-    } */
-
     @Override
     public boolean equals(Object obj) {
         Conteudos c = (Conteudos)obj;
