@@ -55,7 +55,7 @@ public class Main{
         prod1.eletrodomestico = sc.nextLine();
         Categorias cat1 = new Categorias();
         System.out.print("Digite o id: ");
-        cat1.id = Integer.parseInt(sc.nextLine());
+        prod1.id = Integer.parseInt(sc.nextLine());
         System.out.print("Digite o tipo: ");
         cat1.tipo = sc.nextLine();
         System.out.print("Digite a voltagem: ");
@@ -77,7 +77,7 @@ public class Main{
         Produtos prod1 = new Produtos();
         Categorias cat1 = new Categorias();
         System.out.print("Digite o id do produto a ser alterado: ");
-        cat1.id = Integer.parseInt(sc.nextLine());
+        prod1.id = Integer.parseInt(sc.nextLine());
         System.out.print("Digite o eletrodoméstico: ");
         prod1.eletrodomestico = sc.nextLine();
         System.out.print("Digite o tipo: ");
