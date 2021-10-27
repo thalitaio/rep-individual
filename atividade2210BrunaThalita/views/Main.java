@@ -1,10 +1,7 @@
 package atividade2210BrunaThalita.views;
 import java.util.Scanner;
-
-import atividade0410.Produto;
 import atividade2210BrunaThalita.controllers.CategoriasController;
 import atividade2210BrunaThalita.controllers.ProdutosController;
-import atividade2210BrunaThalita.models.Base;
 import atividade2210BrunaThalita.models.Categorias;
 import atividade2210BrunaThalita.models.Produtos;
 
