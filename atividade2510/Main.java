@@ -17,8 +17,11 @@ public class Main {
         int n2 = 0;
         do {
             opcao = menu(sc);
-            n1 = entrada("Digite o primeiro número: ");
-            n2 = entrada("Digite o segundo número: ");
+            if (opcao > 0 && opcao < 5) {
+                n1 = entrada("Digite o primeiro número: ");
+                n2 = entrada("Digite o segundo número: ");
+            }
+           
             switch (opcao) {
                 case 1:
                     System.out.println("O resultado da soma é: " + soma(n1, n2));
@@ -46,7 +49,6 @@ public class Main {
             }
         } while (opcao != 0);
     }
-
     
     private static int menu(Scanner sc) {
         System.out.println("\nEscolha a operação desejada:\n1-Soma\n2-Subtração\n3-Divisão\n4-Multiplicação\n0-Sair\n");
