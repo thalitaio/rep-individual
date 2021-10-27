@@ -1,0 +1,62 @@
+*{
+    background: #000;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3{
+    color: #fff;
+    text-align: center;
+    background: none;
+}
+
+.area-util{
+    background: rgb(138, 138, 138);
+    padding: 50px;
+    margin: 30px;
+}
+
+table{
+    tab-size: 50px;
+    color: #fff;
+    margin: 50px;
+    padding: 30px 300px;
+    align-items: center;
+    display: block;
+    text-align: center;
+    font-size: 1.2rem;
+    background: none;
+}
+
+td{
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    background: none;
+    color: rgb(99, 79, 99);
+}
+
+a:hover{
+    color: rgb(80, 37, 80);
+}
+
+.botao-deletar{
+    background: rgb(99, 79, 99);
+    border: none;
+    border-radius: 2px;
+    width: 50px;
+    height: 20px;
+    color: #fff;
+    text-align: center;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.botao-deletar:hover{
+    background: rgb(80, 37, 80);
+    color: #fff;
+    cursor: pointer;
+}
+
+
