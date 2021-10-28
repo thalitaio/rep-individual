@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styleCreate.css">
+    <script src="js/create.js"></script>
     <title>Página de Cadastro</title>
 </head>
 <body>
@@ -12,15 +13,16 @@
         <h1>Cadastre a sua viagem aqui ✈</h1>
         <form>
             <label for="id">ID:</label>
-            <input type="number" /> 
+            <input type="number" id="id"/> 
             <label for="destino">Destino:</label>
-            <input type="text" placeholder="ex: São Paulo" /> <br />
+            <input type="text" placeholder="ex: São Paulo" id="destino"/> <br />
             <label for="incio">Data Partida:</label>
-            <input type="date" />
+            <input type="date" id="data-inicio" />
             <label for="retorno">Data Retorno:</label>
-            <input type="date" /> <br /><br />
-            <input class="botao" type="submit" value="Salvar">
+            <input type="date" id="data-retorno"/> <br /><br />
+            <input class="botao" type="submit" value="Salvar" id="salva" onclick="salvar(event)">
         </form>
+       
         <h2>Deseja voltar ao menu? <a href="index.html">Clique aqui!</a></h2>
     </div>
 </body>

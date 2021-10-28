@@ -5,75 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styleDelete.css">
+    <script src="js/create.js"></script>
+    <script src="js/delete.js"></script>
     <title>Cancelamento de Viagens</title>
 </head>
-<body>
+<body onload="leitorStorage(event)">
     <div class="area-util">
         <h1>Cancelamento de Viagem ✈</h1>
         <h3>Lembre-se que você pode alterar a sua viagem.<br /> <a href="update.html">Clique aqui para acessar a página!</a></h3>
         <table>
             <thead>
-                <th>ID | </th>
-                <th>Destino | </th>
-                <th>Data da Partida |</th>
+                <th>ID</th>
+                <th>Destino</th>
+                <th>Data da Partida</th>
                 <th>Data de Retorno</th>
                 <th>Deletar</th>
             </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        1
-                    </td>
-                    <td>
-                        Fortaleza
-                    </td>
-                    <td>
-                        10/12/2021
-                    </td>
-                    <td>
-                        17/12/2021
-                    </td>
-                    <td>
-                        <input class="botao-deletar" type="submit" value="Deletar">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        2
-                    </td>
-                    <td>
-                        São Paulo
-                    </td>
-                    <td>
-                        17/12/2021
-                    </td>
-                    <td>
-                        22/12/2021
-                    </td>
-                    <td>
-                        <input class="botao-deletar" type="submit" value="Deletar">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        3
-                    </td>
-                    <td>
-                        Porto Alegre
-                    </td>
-                    <td>
-                        29/12/2021
-                    </td>
-                    <td>
-                        03/01/2022
-                    </td>
-                    <td>
-                        <input class="botao-deletar" type="submit" value="Deletar">
-                    </td>
-                </tr>
+            <tbody id="tabela">
+                
             </tbody>
         </table>
         <h2>Deseja voltar ao menu? <a href="index.html">Clique aqui!</a></h2>
     </div>
+    
 </body>
+
 </html>

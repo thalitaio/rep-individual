@@ -1,5 +1,5 @@
 *{
-    background: #000;
+    background: #fff;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -24,7 +24,7 @@ table{
     display: block;
     text-align: center;
     font-size: 1.2rem;
-    background: none;
+    background: rgb(138, 138, 138);
 }
 
 h2{
@@ -35,6 +35,11 @@ h2{
 
 td{
     text-align: center;
+    background: rgb(138, 138, 138);
+}
+
+th{
+    background: rgb(94, 93, 93);
 }
 
 a{
