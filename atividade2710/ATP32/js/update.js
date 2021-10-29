@@ -1,8 +1,3 @@
-/*
-_  Crie uma função que capture as informações do formulário e salve em localstorage. O dado deve ser um dicionário dentro de uma lista e convertido para JSON.
-_  Crie uma função para ler os dados do localStorage e carregar dentro de uma tabela no HTML. Converta o dado de JSON para uma lista de dicionários.
-
-*/
 
 window.onload = function(){
     let viagem = []
