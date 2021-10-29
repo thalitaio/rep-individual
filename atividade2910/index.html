@@ -1,0 +1,48 @@
+<!--
+_  Crie um sistema Web para manter seu perfil profissional
+_  Crie uma página principal com a estrutura do site contendo o menu e a area de conteudo.
+_  A página principal, deve possuir um menu com: resumo, experiencias, habilidades e contatos
+_  Crie uma página nova para cada item do menu.Cada página deve possuir seu próprio CSS e seu JavaScript, caso necessário.
+_  O menu deve fazer com que as paginas secundarias sejam carregadas na página principal através de javascript.
+
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index-style.css">
+    <link href='https://css.gg/code-slash.css' rel='stylesheet'>
+    <script src="js/index.js"></script>
+    <title>Thalita Carvalho</title>
+</head>
+<body>
+    <header>
+        <div id="logo">
+           <a href="index.html"><i class="gg-code-slash"></i></a>
+        </div>
+        <nav>
+            <ul>
+                <li onclick="carregaResumo()">Resumo</li>
+                <li onclick="carregaExperiencias()">Experiências</li>
+                <li onclick="carregaHabilidades()">Habilidades</li>
+                <li onclick="carregaContatos()">Contato</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="area-main">
+            <iframe id="frame" frameborder="0"></iframe>
+        </div>
+    </main>
+    <footer>
+        <ul>
+            <li><a>Instagram</a></li>
+            <li><a>LinkedIn</a></li>
+            <li><a>GitHub</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
