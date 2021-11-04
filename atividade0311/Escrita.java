@@ -12,12 +12,12 @@ public class Escrita {
             OutputStreamWriter osw = new OutputStreamWriter(fos);
             BufferedWriter bw = new BufferedWriter(osw);
 
-            bw.write("Novo Brunswick ");
-            bw.write("Terra Nova e Labrador ");
-            bw.write("Ilha do Príncipe Eduardo ");
-            bw.write("Territórios do Noroeste ");
-            bw.write("Nunavut ");
-            bw.write("Yukon ");
+            bw.write("Novo Brunswick \n");
+            bw.write("Terra Nova e Labrador \n");
+            bw.write("Ilha do Príncipe Eduardo \n");
+            bw.write("Territórios do Noroeste \n");
+            bw.write("Nunavut \n");
+            bw.write("Yukon \n");
 
             //Fechamento necessário para gravação dos dados
             bw.close();
