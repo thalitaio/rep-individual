@@ -8,27 +8,36 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class TurController implements IController {
-
+    private String filename = "P2/DadosTurismo.txt";
     
-    public String salvar(String dado) {
+    @Override
+    public String salvar(TurModel model) {
         FileWriter fw;
+        String msg;
         try {
-            fw = new FileWriter("P2/DadosTurismo.txt", true);
-            fw.write(dado + "\n");
+            fw = new FileWriter(filename, true);
+            fw.write(model.toString() + "\n");
             fw.close();
+            msg = String.format("%s saldo com sucesso \n", model.nome);
         } catch (IOException e) {
-            System.out.println("Not this time.");
+            msg = "Not this time.";
         }
-        return dado + " salvo com sucesso. \n";
+        return msg;
     }
 
-    public ArrayList<String> ler() {
-        ArrayList<String> dados = new ArrayList<String>();
+    @Override
+    public ArrayList<TurModel> ler() {
+        ArrayList<TurModel> dados = new ArrayList<TurModel>();
         try {
-            Scanner sc = new Scanner(new File("P2/DadosTurismo.txt"));
+            Scanner sc = new Scanner(new File(filename));
             while (sc.hasNextLine()) {
                 String linha = sc.nextLine();
-                dados.add(linha);
+                String[] dados2 = linha.split(";");
+                TurModel pt = new TurModel();
+                pt.nome = dados2[0];
+                pt.descricao = dados2[1];
+                pt.localizacao = dados2[2];
+                dados.add(pt);
             }
         } catch (FileNotFoundException e) {
             System.out.println("A leitura não pode ser realizada.");

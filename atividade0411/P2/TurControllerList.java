@@ -3,19 +3,16 @@ package P2;
 import java.util.ArrayList;
 
 public class TurControllerList implements IController {
-    private ArrayList<String> dados;
+    private ArrayList<TurModel> dados = new ArrayList<TurModel>();
 
-    public TurControllerList(){
-        this.dados = new ArrayList<String>();
-    }
-   
-    public String salvar(String dado) {
-        this.dados.add(dado);
-        return dado + " salvo com sucesso.\n";
+   @Override
+    public String salvar(TurModel model) {
+        this.dados.add(model);
+        return String.format("%s salvo com sucesso.", model.nome);
     }
 
-    
-    public ArrayList<String> ler() {
+    @Override
+    public ArrayList<TurModel> ler() {
         return this.dados;
     }
     

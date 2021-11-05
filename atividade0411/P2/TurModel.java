@@ -10,4 +10,9 @@ public class TurModel {
     public String nome;
     public String descricao;
     public String localizacao;
+
+    @Override
+    public String toString() {
+        return String.format("%s ; %s ; %s", nome, descricao, localizacao);
+    }
 }
