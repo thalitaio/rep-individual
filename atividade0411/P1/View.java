@@ -15,7 +15,9 @@ _  Utilize os métodos de leitura e escrita em uma classe View.
 
 */
 public class View {
+    private static String fileName = "P1/Empresas.csv";
     public static void main(String[] args) {
+        
         Empresa e = new Empresa();
         e.nome = "Havaianas";
         e.cnpj = "11234567890";
@@ -24,7 +26,7 @@ public class View {
         String empresaString = String.format("Nome: %s ; CNPJ: %s ; Atividade: %s \n", e.nome, e.cnpj, e.atividade);
 
         try {
-            FileWriter fw = new FileWriter("P1/Empresas.csv", true);
+            FileWriter fw = new FileWriter(fileName, true);
             fw.write(empresaString);
             fw.close();
         } catch (IOException ex) {
@@ -32,7 +34,7 @@ public class View {
         }
 //leitura
         try {
-            Scanner sc = new Scanner(new File("p1/EMpresas.csv"));
+            Scanner sc = new Scanner(new File(fileName));
             while (sc.hasNextLine()) {
                 String linha = sc.nextLine();
                 String [] empresaItem = linha.split(";");
