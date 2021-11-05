@@ -21,9 +21,11 @@ public class View {
         e.cnpj = "11234567890";
         e.atividade = "Sandálias Overpriced";
 
+        String empresaString = String.format("Nome: %s ; CNPJ: %s ; Atividade: %s \n", e.nome, e.cnpj, e.atividade);
+
         try {
             FileWriter fw = new FileWriter("P1/Empresas.csv", true);
-            fw.write(e.nome + " ; " + e.cnpj + " ; " + e.atividade + "\n" );
+            fw.write(empresaString);
             fw.close();
         } catch (IOException ex) {
             System.out.println("Não foi possível ler o arquivo.");
@@ -33,14 +35,14 @@ public class View {
             Scanner sc = new Scanner(new File("p1/EMpresas.csv"));
             while (sc.hasNextLine()) {
                 String linha = sc.nextLine();
-                //String para obj
                 String [] empresaItem = linha.split(";");
+                //String para obj
                 Empresa e2 = new Empresa();
                 e2.nome = empresaItem[0];
                 e2.cnpj = empresaItem[1];
                 e2.atividade = empresaItem[2];
 
-                System.out.printf("Nome: %s - CNPJ: %s - Atividade: %s \n", e2.nome, e2.cnpj, e2.atividade);
+                System.out.printf("%s ; %s ; %s \n", e2.nome, e2.cnpj, e2.atividade);
             }
         } catch (Exception ex) {
             System.out.println("O arquivo não pode ser lido.");
