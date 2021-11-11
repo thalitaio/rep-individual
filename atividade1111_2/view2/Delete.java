@@ -22,10 +22,8 @@ public class Delete {
             //conectado
             Statement statement = conn.createStatement();
             
-            String sql1 = "DELETE FROM categoria WHERE id=8";
-            String sql2 = "DELETE FROM categoria WHERE id=7";
-            statement.execute(sql1);
-            statement.execute(sql2);
+            String sql = "DELETE FROM categoria WHERE id=8 OR id=7";
+            statement.execute(sql);
             System.out.print("Deletado com sucesso");
 
             conn.close();
