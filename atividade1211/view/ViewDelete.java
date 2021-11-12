@@ -3,6 +3,7 @@ package view;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 public class ViewDelete {
     public static void main(String[] args) {
@@ -30,8 +31,8 @@ public class ViewDelete {
             System.out.printf("Foram deletadas %d linha(s)", linhasDeletadas);
 
             conn.close();
-       } catch (Exception e) {
-           //TODO: handle exception
+       } catch (SQLException e) {
+           e.printStackTrace();
        }
     }
 }
