@@ -9,6 +9,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 
 import model.Categoria;
 import view.ConnectionFactory;
@@ -38,6 +39,26 @@ public class CategoriaDao {
         }
     }
     //Read
+    public ArrayList<Categoria> read() {
+        ArrayList<Categoria> lista = new ArrayList<Categoria>();
+        try(Connection conn = new ConnectionFactory().getConnection()) {
+            
+            PreparedStatement prepStatement = conn.prepareStatement("SELECT * FROM categoria");
+            prepStatement.execute();
+            ResultSet resultado = prepStatement.getResultSet();
+            
+            while (resultado.next()) {
+                Categoria model = new Categoria();
+                model.setId(resultado.getInt("id"));
+                model.setNome(resultado.getString("nome"));
+                model.setDescricao(resultado.getString("descricao"));
+                lista.add(model);
+            }
+       } catch (SQLException e) {
+           e.printStackTrace();
+       }
+       return lista;
+    }
 
     //Update
     public  void update(Categoria model) {
