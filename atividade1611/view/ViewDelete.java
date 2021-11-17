@@ -1,26 +1,24 @@
 package view;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.util.Scanner;
+
+import dao.CategoriaDao;
+import model.Categoria;
 
 public class ViewDelete {
     public static void main(String[] args) {
-       try(Connection conn = new ConnectionFactory().getConnection()) {
-            int idDeletado = 2;
-            String sql = "DELETE FROM categoria WHERE id=?";
-            try(PreparedStatement prepStatement = conn.prepareStatement(sql);)
-            {
-                prepStatement.setInt(1, idDeletado);
-                prepStatement.execute();
-                int linhasDeletadas = prepStatement.getUpdateCount();
-                System.out.printf("Foram deletadas %d linha(s)", linhasDeletadas);
-            }catch(SQLException e){
-                e.printStackTrace();
-            }
-       } catch (SQLException e) {
-           e.printStackTrace();
-       }
+        Categoria model = new Categoria();
+        CategoriaDao dao = new CategoriaDao();
+        
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.print("\nDigite o id que deseja deletar: ");
+            model.setId(sc.nextInt());
+
+        } catch (Exception e) {
+            System.out.println("Não foi possível deletar.");
+        }
+
+        dao.delete(model);
     }
+
 }

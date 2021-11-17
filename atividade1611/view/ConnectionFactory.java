@@ -1,15 +1,11 @@
 package view;
 
 import java.sql.Connection;
-import java.sql.Driver;
-import java.sql.DriverManager;
 import java.sql.SQLException;
 
 import javax.sql.DataSource;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
-
-// Altere a fábrica de conexões para utilizarem um pool de conexões com um limite de 50 conexões
 
 public class ConnectionFactory {
     private String url;
