@@ -1,7 +1,7 @@
 package dao;
 //_  Crie uma cópia das classes criadas durante a atividade ATP50. OK
 //_  Altere aplicação para separar a camada de acesso ao banco da camada de visualização.
-//_  Crie uma camada DAO e nela uma classe CategoriaDAO que irá realizar as operações de CRUD no banco com JDBC.
+//_  Crie uma camada DAO e nela uma classe CategoriaDAO que irá realizar as operações de CRUD no banco com JDBC. OK
 //_  Ajuste as classes de view para utilizarem a classe CategoriaDAO;
 
 import java.sql.Connection;
@@ -12,7 +12,6 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 import model.Categoria;
-import view.ConnectionFactory;
 
 public class CategoriaDao {
     //Create
@@ -46,7 +45,7 @@ public class CategoriaDao {
             PreparedStatement prepStatement = conn.prepareStatement("SELECT * FROM categoria");
             prepStatement.execute();
             ResultSet resultado = prepStatement.getResultSet();
-            
+
             while (resultado.next()) {
                 Categoria model = new Categoria();
                 model.setId(resultado.getInt("id"));
