@@ -1,2 +1,4 @@
-Categoria.class
-Produto.class
+com\natal\natal\models\CategoriaModel.class
+com\natal\natal\servlets\ProdutoServlet.class
+com\natal\natal\models\ProdutoModel.class
+com\natal\natal\servlets\CategoriaServlet.class

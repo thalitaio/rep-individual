@@ -14,8 +14,8 @@
     </header>
     <nav>
         <h2>
-            <a href="/natal-1/categoria" style="text-decoration: none;">Categoria</a><br>
-            <a href="/natal-1/produto" style="text-decoration: none;">Produto</a>
+            <a href="/natal-1/categoria.jsp" style="text-decoration: none;">Categoria</a><br>
+            <a href="/natal-1/produto.jsp" style="text-decoration: none;">Produto</a>
         </h2>
     </nav>
     <div>
