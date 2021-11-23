@@ -1,4 +1,4 @@
-package dao;
+package com.natal.natal.dao;
 //_  Crie uma cópia das classes criadas durante a atividade ATP50. OK
 //_  Altere aplicação para separar a camada de acesso ao banco da camada de visualização.
 //_  Crie uma camada DAO e nela uma classe CategoriaDAO que irá realizar as operações de CRUD no banco com JDBC. OK
@@ -11,11 +11,12 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-import model.Categoria;
+import com.natal.natal.models.CategoriaModel;
 
 public class CategoriaDao {
     //Create
-    public void create(Categoria model) {
+    public int create(CategoriaModel model) {
+        int idGerado = 0;
         try (Connection conn = new ConnectionFactory().getConnection())
         {
             String sql = "INSERT INTO categoria(nome, descricao)VALUES(?, ?)";
@@ -36,10 +37,11 @@ public class CategoriaDao {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        return idGerado;
     }
     //Read
-    public ArrayList<Categoria> read() {
-        ArrayList<Categoria> lista = new ArrayList<Categoria>();
+    public ArrayList<CategoriaModel> read() {
+        ArrayList<CategoriaModel> lista = new ArrayList<CategoriaModel>();
         try(Connection conn = new ConnectionFactory().getConnection()) {
             
             PreparedStatement prepStatement = conn.prepareStatement("SELECT * FROM categoria");
@@ -47,7 +49,7 @@ public class CategoriaDao {
             ResultSet resultado = prepStatement.getResultSet();
 
             while (resultado.next()) {
-                Categoria model = new Categoria();
+                CategoriaModel model = new CategoriaModel();
                 model.setId(resultado.getInt("id"));
                 model.setNome(resultado.getString("nome"));
                 model.setDescricao(resultado.getString("descricao"));
@@ -60,14 +62,14 @@ public class CategoriaDao {
     }
 
     //Update
-    public  void update(Categoria model) {
+    public  void update(CategoriaModel model) {
         try(Connection conn = new ConnectionFactory().getConnection()) 
            {
                 String sql = "UPDATE categoria SET nome=?, descricao=? WHERE id=?";
                 try (PreparedStatement prepStatement = conn.prepareStatement(sql);) {
                     prepStatement.setString(1, model.getNome());
                     prepStatement.setString(2, model.getDescricao());
-                    prepStatement.setInt(3, model.getID());
+                    prepStatement.setInt(3, model.getId());
                     prepStatement.execute();
                 } catch (SQLException e) {
                     e.printStackTrace();
@@ -77,10 +79,10 @@ public class CategoriaDao {
            }
     }
     //Delete
-    public int delete(Categoria model) {
+    public int delete(CategoriaModel model) {
         int linhasDeletadas = 0;
         try(Connection conn = new ConnectionFactory().getConnection()) {
-                int idDeletado = model.getID();
+                int idDeletado = model.getId();
                 String sql = "DELETE FROM categoria WHERE id=?";
                 try(PreparedStatement prepStatement = conn.prepareStatement(sql);)
                 {

@@ -1,6 +1,7 @@
 package view;
 
-import dao.CategoriaDao;
+import com.natal.natal.dao.CategoriaDao;
+
 import model.Categoria;
 
 public class ViewRead {

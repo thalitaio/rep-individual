@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,8 +18,9 @@
             <a href="/natal-1/produto.jsp" style="text-decoration: none;">Produto</a>
         </h2>
     </nav>
-    <div>
+    <button style="align-items: center;margin: 5px; background: rgb(255, 80, 80); border: 1px solid rgb(255, 80, 80);"><a href="http://localhost:8080/natal-1/categoriamodel/listar" style="color: #fff;text-decoration: none;">&#10052; Listar Categorias &#10052;</a></button>
+    <span>
         <h1>&#127876;</h1>
-    </div>
+    </span>
 </body>
 </html>

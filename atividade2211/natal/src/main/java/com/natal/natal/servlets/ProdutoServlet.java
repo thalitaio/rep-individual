@@ -13,7 +13,7 @@ import jakarta.servlet.http.HttpServletResponse;
 @WebServlet(urlPatterns = "/produto")
 public class ProdutoServlet extends HttpServlet{
     @Override
-    protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         PrintWriter out = resp.getWriter();
         ProdutoModel prod = new ProdutoModel();
 
@@ -23,7 +23,7 @@ public class ProdutoServlet extends HttpServlet{
 
         prod.setNome(nome);
 
-        if(parametroValor != null && parametroIdCategoria !=null){
+        if(parametroValor != "" && parametroIdCategoria !=""){
             prod.setValor(Float.parseFloat(parametroValor));
             prod.setIdCategoria(Integer.parseInt(parametroIdCategoria));
             out.printf("Modulo Produtos - ProdModel = %s - %.2f - %d", prod.getNome(), prod.getValor(), prod.getIdCategoria());

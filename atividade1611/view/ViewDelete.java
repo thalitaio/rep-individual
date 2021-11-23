@@ -2,7 +2,8 @@ package view;
 
 import java.util.Scanner;
 
-import dao.CategoriaDao;
+import com.natal.natal.dao.CategoriaDao;
+
 import model.Categoria;
 
 public class ViewDelete {
