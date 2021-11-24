@@ -1,10 +1,10 @@
 package com.natal.natal.servlets;
 import java.io.IOException;
-import java.io.PrintWriter;
 
 import com.natal.natal.dao.CategoriaDao;
 import com.natal.natal.models.CategoriaModel;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -20,9 +20,12 @@ public class CategoriaServlet extends HttpServlet{
 
         model.setNome(req.getParameter("nome"));
         model.setDescricao(req.getParameter("descricao"));
-        dao.create(model);
+        int id = dao.create(model);
+        model.setId(id);
 
-        PrintWriter out = resp.getWriter();
-        out.printf("Modulo Categoria -- CategoriaModel = ID: %d - Nome: %s - Descricao: %s", model.getId(), model.getNome(), model.getDescricao());
+        req.setAttribute("id", model.getId());
+
+       RequestDispatcher rd = req.getRequestDispatcher("categoria-criada.jsp");
+       rd.forward(req, resp);
     }
 }

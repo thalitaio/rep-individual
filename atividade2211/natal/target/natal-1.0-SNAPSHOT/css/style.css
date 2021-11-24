@@ -1,0 +1,45 @@
+body{
+    background:rgb(182, 179, 179);
+    text-align: center;
+    color: black;
+}
+
+.tree{
+    color: green;
+}
+
+button{
+    align-items: center;
+    margin: 5px; 
+    background: rgb(255, 80, 80); 
+    border: 1px solid rgb(255, 80, 80);
+}
+
+button:hover{
+    margin:6px;
+}
+
+a{
+    color: #fff;text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+h1{
+    color: rgb(255, 80, 80);
+    text-align: center;
+}
+
+form{
+    background:rgb(182, 179, 179);
+    text-align:center;
+    color: black;
+    margin:10px;
+    text-transform:capitalize;
+}
+
+input{
+    margin: 7px;
+}

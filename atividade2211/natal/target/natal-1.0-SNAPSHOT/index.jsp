@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>Itens de Natal</title>
 </head>
-<body style="background:rgb(182, 179, 179);text-align:center;color: black;">
+<body>
     <header>
         <div>
-            <h1 style="color: rgb(255, 80, 80);">App Natal Shop</h1>
+            <h1>App Natal Shop</h1>
         </div>
     </header>
     <nav>
@@ -18,9 +19,9 @@
             <a href="/natal-1/produto.jsp" style="text-decoration: none;">Produto</a>
         </h2>
     </nav>
-    <button style="align-items: center;margin: 5px; background: rgb(255, 80, 80); border: 1px solid rgb(255, 80, 80);"><a href="http://localhost:8080/natal-1/categoriamodel/listar" style="color: #fff;text-decoration: none;">&#10052; Listar Categorias &#10052;</a></button>
+    <button><a href="http://localhost:8080/natal-1/categoriamodel/listar">&#10052; Listar Categorias &#10052;</a></button>
     <span>
-        <h1 style="color: green;">&#127876;</h1>
+        <h1 class="tree">&#127876;</h1>
     </span>
 </body>
 </html>

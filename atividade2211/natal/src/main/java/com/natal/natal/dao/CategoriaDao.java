@@ -28,8 +28,7 @@ public class CategoriaDao {
                 prepStatement.execute();
                 ResultSet ids = prepStatement.getGeneratedKeys();
             while (ids.next()) {
-                int id = ids.getInt("id");
-                System.out.println(id);
+                idGerado = ids.getInt("id");
             }
            } catch (SQLException e) {
                 e.printStackTrace();
@@ -40,25 +39,46 @@ public class CategoriaDao {
         return idGerado;
     }
     //Read
+    public ArrayList<CategoriaModel> read(String nome) {
+        ArrayList<CategoriaModel> lista = new ArrayList<CategoriaModel>();
+        try(Connection conn = new ConnectionFactory().getConnection()) {
+            
+            PreparedStatement prepStatement = conn.prepareStatement("SELECT * FROM categoria WHERE nome = ?");
+            prepStatement.setString(1, nome);
+            prepStatement.execute();
+            ResultSet result = prepStatement.getResultSet();
+            lista = createList(result);
+       } catch (SQLException e) {
+           e.printStackTrace();
+       }
+       return lista;
+    }
+
+    //Read sem parâmetros
     public ArrayList<CategoriaModel> read() {
         ArrayList<CategoriaModel> lista = new ArrayList<CategoriaModel>();
         try(Connection conn = new ConnectionFactory().getConnection()) {
             
             PreparedStatement prepStatement = conn.prepareStatement("SELECT * FROM categoria");
             prepStatement.execute();
-            ResultSet resultado = prepStatement.getResultSet();
-
-            while (resultado.next()) {
-                CategoriaModel model = new CategoriaModel();
-                model.setId(resultado.getInt("id"));
-                model.setNome(resultado.getString("nome"));
-                model.setDescricao(resultado.getString("descricao"));
-                lista.add(model);
-            }
+            ResultSet result = prepStatement.getResultSet();
+            lista = createList(result);
        } catch (SQLException e) {
            e.printStackTrace();
        }
        return lista;
+    }
+
+    public ArrayList<CategoriaModel> createList(ResultSet result) throws SQLException {
+        ArrayList<CategoriaModel> lista = new ArrayList<CategoriaModel>();
+        while(result.next()){
+            CategoriaModel model = new CategoriaModel();                
+            model.setId(result.getInt("id"));
+            model.setNome(result.getString("nome"));
+            model.setDescricao(result.getString("descricao"));
+            lista.add(model);
+        }
+        return lista;
     }
 
     //Update
