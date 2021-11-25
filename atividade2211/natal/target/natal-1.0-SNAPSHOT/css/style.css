@@ -19,6 +19,10 @@ button:hover{
     margin:6px;
 }
 
+h2:hover{
+    text-decoration: underline;
+}
+
 a{
     color: #fff;text-decoration: none;
 }
@@ -32,6 +36,10 @@ h1{
     text-align: center;
 }
 
+h3{
+    color: #fff;
+}
+
 form{
     background:rgb(182, 179, 179);
     text-align:center;
@@ -42,4 +50,8 @@ form{
 
 input{
     margin: 7px;
+}
+
+table{
+    align-items: center;
 }

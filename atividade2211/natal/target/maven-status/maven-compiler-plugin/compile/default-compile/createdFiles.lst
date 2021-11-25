@@ -1,5 +1,8 @@
 com\natal\natal\models\CategoriaModel.class
+com\natal\natal\servlets\CatBuscarServlet.class
+com\natal\natal\servlets\CatAlterarServlet.class
 com\natal\natal\servlets\CatReadServlet.class
+com\natal\natal\servlets\CatDeletarServlet.class
 com\natal\natal\servlets\ProdutoServlet.class
 com\natal\natal\dao\CategoriaDao.class
 com\natal\natal\models\ProdutoModel.class

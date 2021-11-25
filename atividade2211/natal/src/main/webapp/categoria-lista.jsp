@@ -10,7 +10,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Lista de Categorias</title>
 </head>
 <body>
@@ -26,6 +26,8 @@
                 <th>Id</th>
                 <th>Nome</th>
                 <th>Descricao</th>
+                <th>Atualizar</th>
+                <th>Deletar</th>
             </tr>
         </thead>
         <tbody>
@@ -34,6 +36,8 @@
                     <td><%= model.getId() %></td>
                     <td><%= model.getNome() %></td>
                     <td><%= model.getDescricao() %></td>
+                    <td><a href="/natal-1/categoriamodel/carregar?id=<%= model.getId() %>">Alterar</a></td>
+                    <td><a href="/natal-1/categoriamodel/deletar?id=<%= model.getId() %>">Deletar</a></td>
                 </tr>
             <%}%>
         </tbody>

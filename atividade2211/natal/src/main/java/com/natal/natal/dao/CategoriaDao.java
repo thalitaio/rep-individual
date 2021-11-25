@@ -13,6 +13,8 @@ import java.util.ArrayList;
 
 import com.natal.natal.models.CategoriaModel;
 
+import org.postgresql.util.PSQLException;
+
 public class CategoriaDao {
     //Create
     public int create(CategoriaModel model) {
@@ -69,6 +71,26 @@ public class CategoriaDao {
        return lista;
     }
 
+    //read by id
+    public CategoriaModel readById(int id) {
+        CategoriaModel model = new CategoriaModel();
+        try(Connection conn = new ConnectionFactory().getConnection()) {
+            PreparedStatement prepStatement = conn.prepareStatement("SELECT * FROM categoria WHERE id = ?");
+            prepStatement.setInt(1, id);
+            prepStatement.execute();
+            ResultSet result = prepStatement.getResultSet(); 
+            while(result.next()){
+                model.setId(result.getInt("id"));
+                model.setNome(result.getString("nome"));
+                break;
+            }            
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } 
+        return model;
+    }
+
     public ArrayList<CategoriaModel> createList(ResultSet result) throws SQLException {
         ArrayList<CategoriaModel> lista = new ArrayList<CategoriaModel>();
         while(result.next()){
@@ -102,19 +124,21 @@ public class CategoriaDao {
     public int delete(CategoriaModel model) {
         int linhasDeletadas = 0;
         try(Connection conn = new ConnectionFactory().getConnection()) {
-                int idDeletado = model.getId();
+                
                 String sql = "DELETE FROM categoria WHERE id=?";
                 try(PreparedStatement prepStatement = conn.prepareStatement(sql);)
                 {
-                    prepStatement.setInt(1, idDeletado);
+                    prepStatement.setInt(1, model.getId());
                     prepStatement.execute();
                     linhasDeletadas = prepStatement.getUpdateCount();
                 }catch(SQLException e){
                     e.printStackTrace();
                 }
+           }  catch (PSQLException e){
+               System.out.println("Não é possível deletar ID 6.");
            } catch (SQLException e) {
-               e.printStackTrace();
-           }
+            e.printStackTrace();
+        }
         return linhasDeletadas;
     }
 
