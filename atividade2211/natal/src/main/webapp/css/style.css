@@ -10,8 +10,8 @@ body{
 
 button{
     align-items: center;
-    margin: 5px; 
-    background: rgb(255, 80, 80); 
+    margin: 5px;
+    background: rgb(255, 80, 80);
     border: 1px solid rgb(255, 80, 80);
 }
 
@@ -19,9 +19,7 @@ button:hover{
     margin:6px;
 }
 
-h2:hover{
-    text-decoration: underline;
-}
+
 
 a{
     color: #fff;text-decoration: none;
@@ -53,5 +51,6 @@ input{
 }
 
 table{
-    align-items: center;
+    width: 80%;
+    margin: auto;
 }

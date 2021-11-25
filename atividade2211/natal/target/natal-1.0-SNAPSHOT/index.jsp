@@ -15,8 +15,8 @@
     </header>
     <nav>
         <h2>
-            <a href="/natal-1/categoria.jsp" style="text-decoration: none;">Categoria</a><br>
-            <a href="/natal-1/produto.jsp" style="text-decoration: none;">Produto</a>
+            <a href="/natal-1/categoria.jsp">Categoria</a><br>
+            <a href="/natal-1/produto.jsp">Produto</a>
         </h2>
     </nav>
     <button><a href="http://localhost:8080/natal-1/categoriamodel/listar">&#10052; Listar Categorias &#10052;</a></button>

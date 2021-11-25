@@ -15,7 +15,7 @@
 </head>
 <body>
        <h1>Lista de categorias</h1>
-    <form action="/vendas-1/categoriamodel/listar" method="get">
+    <form action="/natal-1/categoriamodel/listar" method="get">
         Nome:<input type="text" name="nome" id="nome">
         Descricao:<input type="text" name="descricao" id="descricao">
         <input type="submit" value="Filtrar">

@@ -27,17 +27,15 @@ public class CatReadServlet extends HttpServlet{
             categorias = dao.read(nome);
         }
         else{
-            categorias = dao.read();
-        }         
-
-        
-        if(desc != null && desc != ""){
-            categorias = dao.read(desc);
-        }
-        else{
-            categorias = dao.read();
-        }    
-        
+            if(desc != null && desc != ""){
+                categorias = dao.read(desc);
+            }
+            else{
+                categorias = dao.read();
+            }    
+            
+        } 
+       
         req.setAttribute("categorias", categorias);
         RequestDispatcher rd = req.getRequestDispatcher("/categoria-lista.jsp");
         rd.forward(req, resp);

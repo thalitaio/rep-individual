@@ -45,7 +45,7 @@ public class CategoriaDao {
         ArrayList<CategoriaModel> lista = new ArrayList<CategoriaModel>();
         try(Connection conn = new ConnectionFactory().getConnection()) {
             
-            PreparedStatement prepStatement = conn.prepareStatement("SELECT * FROM categoria WHERE nome = ?");
+            PreparedStatement prepStatement = conn.prepareStatement("SELECT * FROM categoria WHERE descricao = ?");
             prepStatement.setString(1, nome);
             prepStatement.execute();
             ResultSet result = prepStatement.getResultSet();
