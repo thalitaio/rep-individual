@@ -6,6 +6,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
+import com.thalitaio.dao.CategoriaDao;
 import com.thalitaio.model.Categoria;
 
 public class App 
@@ -14,19 +15,16 @@ public class App
     {
         System.out.println( "Dados de Categoria" );
         Categoria model = new Categoria();
-        model.setNome("Nome teste");
-        model.setDescricao("Nome teste");
+        CategoriaDao dao = new CategoriaDao();
+        model.setId(9);
+        model.setNome("UHUL  26/11");
+        model.setDescricao("atualizado 26/11");
 
-        EntityManagerFactory factory= Persistence.createEntityManagerFactory("banco");
-        EntityManager em = factory.createEntityManager();
+        dao.update(model);
 
-        em.getTransaction().begin();
-        em.persist(model);
-        em.getTransaction().commit();
+    
 
-        List<Categoria> lista = em.createQuery("SELECT c FROM Categoria c", Categoria.class).getResultList();
-
-        for(Categoria cat : lista){
+        for(Categoria cat : dao.read()){
             System.out.printf("ID: %d - Nome: %s - Descrição: %s \n", cat.getId(), cat.getNome(), cat.getDescricao());
         }
 
