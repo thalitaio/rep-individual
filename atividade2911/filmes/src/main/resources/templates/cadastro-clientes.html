@@ -22,11 +22,10 @@
                     <td th:text="${c.nome}"></td>
                     <td th:text="${c.sobrenome}"></td>
                     <td th:text="${c.email}"></td>
-                    <td>
-                        <button type="button" class="btn btn-danger"><a th:href="@{'
+                    <td class="botoes">
+                        <button type="button" class="btn btn-danger btn-sm"><a th:href="@{'
                             /cadastro/editar/'+${c.id}}">Editar</a></button>
-                        
-                        <button type="button" class="btn btn-warning"><a th:href="@{'
+                        <button type="button" class="btn btn-warning btn-sm"><a th:href="@{'
                             /cadastro/deletar/'+${c.id}}">Deletar</a></button>
                         
                     </td>

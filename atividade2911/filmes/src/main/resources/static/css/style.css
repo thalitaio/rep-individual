@@ -1,5 +1,5 @@
 body{
-    background: rgb(243, 197, 197);
+    background: rgb(190, 186, 186);
 }
 
 main{
@@ -27,4 +27,8 @@ a{
 
 .link-branco{
     color: #fff;
+}
+
+.botoes{
+    width: 200px;;
 }
