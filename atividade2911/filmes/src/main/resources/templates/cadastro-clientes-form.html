@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head th:replace="~{base::head(Cadastrar)}"></head>
+<body>
+    <header th:replace="~{base::cabecalho}"></header>
+   <main>
+        <h1>Cadastro</h1>
+        <form action="/cadastro/salvar" method="post">
+            <input type="hidden" name="id" id="id" th:value="${model.id}">
+
+            <div class="mb-3">
+                <label for="nome" class="form-label">Nome:</label>            
+                <input class="form-control" type="text" name="nome" id="nome" th:value="${model.nome}">
+            </div>
+            <div class="mb-3">
+                <label for="sobrenome" class="form-label">Sobrenome:</label>                
+                <input class="form-control" type="text" name="sobrenome" id="nomeDiretor" th:value="${model.sobrenome}">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">E-mail:</label>                 
+                <input class="form-control" type="text" name="email" id="email" th:value="${model.email}">
+            </div>      
+            <input class="btn  btn-primary" type="submit" value="Salvar">
+        </form> <br />
+
+        <button type="button" class="btn btn-light"> <a href="/cadastro" class="link">Voltar para lista</a></button>
+
+       
+   </main>
+</body>
+</html>

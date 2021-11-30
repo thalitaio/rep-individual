@@ -1,0 +1,30 @@
+body{
+    background: rgb(243, 197, 197);
+}
+
+main{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+h1{
+    margin: 1em;
+}
+
+table{
+    margin: 1em;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.link{
+    color: black;
+}
+
+.link-branco{
+    color: #fff;
+}

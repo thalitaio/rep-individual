@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head th:replace="~{base :: head('Cadastro de Cliente')}"></head>
+<body>
+    <header th:replace="~{base :: cabecalho}"></header>
+    <main>
+        <h1>Clientes Cadastrados</h1>
+        <a type="button" class="btn btn-info link-branco" href="/cadastro/form">Cadastrar Cliente</a>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Sobrenome</th>
+                    <th scope="col">E-mail</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="c:${lista}">
+                    <td th:text="${c.id}"></td>
+                    <td th:text="${c.nome}"></td>
+                    <td th:text="${c.sobrenome}"></td>
+                    <td th:text="${c.email}"></td>
+                    <td>
+                        <button type="button" class="btn btn-danger"><a th:href="@{'
+                            /cadastro/editar/'+${c.id}}">Editar</a></button>
+                        
+                        <button type="button" class="btn btn-warning"><a th:href="@{'
+                            /cadastro/deletar/'+${c.id}}">Deletar</a></button>
+                        
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>
