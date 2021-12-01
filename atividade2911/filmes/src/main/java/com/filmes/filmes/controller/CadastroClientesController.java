@@ -18,8 +18,14 @@ public class CadastroClientesController {
     }
 
     @GetMapping("/cadastro")
-    public String cadastroClientes(Model req){
-        List<CadastroClientes> lista = (List<CadastroClientes>)repository.findAll();
+    public String cadastroClientes(Model req, String nome){
+        List<CadastroClientes> lista;
+        if (nome!= null) {
+            lista = (List<CadastroClientes>)repository.findByNome(nome);
+        } else {
+            lista =  (List<CadastroClientes>)repository.findAll();
+        }
+        
         req.addAttribute("lista", lista);
         return "cadastro-clientes";
     }
