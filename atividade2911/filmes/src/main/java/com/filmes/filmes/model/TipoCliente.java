@@ -4,30 +4,22 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name = "cadastroclientes")
-public class CadastroClientes {
+@Table(name = "tipocliente")
+public class TipoCliente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Getter @Setter
     private int id;
 
     @Getter @Setter
-    private String nome;
+    private String status;
 
     @Getter @Setter
-    private String sobrenome;
-
-    @Getter @Setter
-    private String email;
-   
-    @Getter @Setter
-    @ManyToOne
-    private TipoCliente tipocliente;
+    private int anoCadastro;
 }
